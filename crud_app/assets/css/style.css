@@ -1,0 +1,95 @@
+/*
+무료 폰트 : https://fonts.google.com
+사용법:
+    1) 원하는 폰트들을 +select this style 한다
+    2) @import 의 텍스트를 복사해서 .css file 에 붙여넣음 
+    3) 그 밑 텍스트들의 속성값을 복사해서 원하는 곳에서 font-family: 에 사용
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Mono:wght@300&display=swap');
+
+:root{
+    --dark: #2b2d42;
+    --light: #adb5bd;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    color: orange
+}
+
+.container {
+    max-width: 1024px;  /*해당 box 의 최대 크기 지정*/
+    margin: auto;   /*브라우저 크기에 비례해서 box 중앙 자동 정렬*/
+    border-right: 2px solid palegreen;
+    border-left: 2px solid palegreen;
+   
+}
+
+.text-center {
+    text-align: center;
+}
+
+.nav-brand{
+    font-size: 3.5em;    /*현재 글꼴 크기의 3.5배 라는 뜻*/
+}
+
+.d-flex{
+    display: flex;  /*flex 사용하면 내용물 전체 고유의 width 값 무시되고 한 줄로 정렬됨*/
+    flex-wrap: wrap;    /*element width 고정값 유지 & 다음 줄로 정렬*/
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.border-shadow{
+    border:3px solid transparent;
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px var(--dark);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, orangered, blue);
+    /*아래 속성값 없으면 backround-color 값에 그라디언트 색상 들어감*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#header nav {
+    background-color: yellowgreen;
+}
+
+#site-main{
+    margin-top: 5em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#site-main .container .box-nav > a{
+    padding: .5em 2em;
+}
+
+#site-main .container form{
+    margin: 2em 0;
+}
+
+table {
+    border-spacing: 4px;    /*cell 들 간 간격*/
+    width: 100%;    /*부모와 같은 width 를 가짐. 없으면 자식들 box 크기 의 총 값*/
+}
+
+.line-nav th, .line-nav td {
+    padding:.5em;
+    vertical-align: bottom;     /* 같은 줄에 있는 element 들의 상하 정렬 기준*/
+    border-top: 1px solid palegreen;
+    text-align: center;
+}

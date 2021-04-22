@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!--header-->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">User Management System</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!--/header-->
+<!--main-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">New User</span>
+                </a>
+            </div>
+            <form action="/" method="POST">
+                <table class="line-nav">
+                    <thead class="t-head">
+                        <tr class="tr">
+                            <th class="th">ID</th>
+                            <th class="th">Name</th>
+                            <th class="th">Email</th>
+                            <th class="th">Gender</th>
+                            <th class="th">Status</th>
+                            <th class="th">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Username</td>
+                            <td>example@gmail.com</td>
+                            <td>Mail</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn">
+                                    <span>Update</span>
+                                </a>
+                                <a class="btn">
+                                    <span>Delete</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!--/main-->
+</body>
+</html>
