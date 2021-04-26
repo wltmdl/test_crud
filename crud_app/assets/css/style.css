@@ -38,6 +38,10 @@ a{
     text-align: center;
 }
 
+.text-light {
+    color:var(--light);
+}
+
 .nav-brand{
     font-size: 3.5em;    /*현재 글꼴 크기의 3.5배 라는 뜻*/
 }
@@ -83,7 +87,7 @@ a{
 }
 
 table {
-    border-spacing: 4px;    /*cell 들 간 간격*/
+    border-spacing: 1px;    /*cell 들 간 간격*/
     width: 100%;    /*부모와 같은 width 를 가짐. 없으면 자식들 box 크기 의 총 값*/
 }
 
@@ -91,5 +95,93 @@ table {
     padding:.5em;
     vertical-align: bottom;     /* 같은 줄에 있는 element 들의 상하 정렬 기준*/
     border-top: 1px solid palegreen;
+    text-align: center;
+}
+
+.line-nav tbody tr td:last-child{
+    width: 21%;
+}
+
+.line-nav td > a.btn {
+    padding: 0.2em 1em;
+    margin: 0 .3em;
+    background-color: brown;
+}
+
+.line-nav tbody tr:hover {
+    background-color: coral;
+}
+
+.line-nav .t-head th {
+    color: var(--light);
+    background-color: var(--dark);
+    border-color: blueviolet;
+}
+
+#update_user .inline-item {
+    display: inline;
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, tr,th,td{
+        display:block;
+    }
+}
+
+
+/* update html css*/
+
+.form-title {
+    margin-top: 1.5em;
+}
+.form-title > h2{
+    padding: .5em 0em;
+}
+.new_user{
+    max-width: 800px;
+    margin: auto;
+}
+
+
+#update_user .form-item{
+    margin: 1.5em;
+}
+
+#update_user .form-item input[type="text"]{
+    width: 100%;
+    margin-top: 1em;
+    padding:.5em;
+    border: 1.5px solid var(--dark);
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+.form-item .radio {
+    margin: 1em 2.5em;
+    background-color: yellowgreen;
+}
+
+.radio input[type="radio"]{
+    position: absolute;
+    opacity: 100;
+}
+
+.radio input[type="radio"] + .form-label-radio:before{
+    content: "";
+    background:orangered;
+    cursor: pointer;
+
+    position: relative;
+    bottom: -.155em;
+    
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+    margin-right: .35em;
+
+    vertical-align: top;
+
     text-align: center;
 }
