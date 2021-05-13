@@ -13,6 +13,35 @@
     <% } %>
 -->
 
-<%- include( 'include/_header' )%>
+<%- include( 'include/_header') %>
 
-<%- include( 'include/_footer' )%>
+<!--main-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">New User</span>
+            </a>
+        </div>
+        <form action="/" method="POST">
+            <table class="line-nav">
+                <thead class="t-head">
+                    <tr class="tr">
+                        <th class="th">ID</th>
+                        <th class="th">Name</th>
+                        <th class="th">Email</th>
+                        <th class="th">Gender</th>
+                        <th class="th">Status</th>
+                        <th class="th">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%-include('include/_show')%>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!--/main-->
+
+<%-include( 'include/_footer') %>

@@ -1,0 +1,17 @@
+<% for(var i = 0; i < Users.length; i++) {%>
+<tr>
+    <td><%= i + 1%></td>
+    <td><%= Users[i].name %></td>
+    <td><%= Users[i].email %></td>
+    <td><%= Users[i].gender %></td>
+    <td><%= Users[i].status %></td>
+    <td>
+        <a href="/update-user" class="btn">
+            <span>Update</span>
+        </a>
+        <a class="btn">
+            <span>Delete</span>
+        </a>
+    </td>
+</tr>
+<% } %>

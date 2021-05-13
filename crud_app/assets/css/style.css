@@ -23,7 +23,7 @@
 a{
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
-    color: orange
+    color: tomato;
 }
 
 .container {
@@ -118,6 +118,7 @@ table {
     border-color: blueviolet;
 }
 
+#add_user .inline-item,
 #update_user .inline-item {
     display: inline;
 }
@@ -142,11 +143,12 @@ table {
     margin: auto;
 }
 
-
+#add_user .form-item,
 #update_user .form-item{
     margin: 1.5em;
 }
 
+#add_user .form-item input[type="text"],
 #update_user .form-item input[type="text"]{
     width: 100%;
     margin-top: 1em;
@@ -164,24 +166,68 @@ table {
 
 .radio input[type="radio"]{
     position: absolute;
-    opacity: 100;
+    opacity: 0;
 }
 
 .radio input[type="radio"] + .form-label-radio:before{
     content: "";
     background:orangered;
-    cursor: pointer;
+    cursor: pointer;    /*적용안되는중*/
 
     position: relative;
-    bottom: -.155em;
+    bottom: -.1em;
     
     display: inline-block;
     width: 1em;
     height: 1em;
+    border-radius: .5em;
+
+    border: 1px solid grey;
 
     margin-right: .35em;
 
     vertical-align: top;
 
     text-align: center;
+
+    -webkit-transition: all 250ms ease;
+    transitioin: all 250ms ease;
+}
+
+.radio input[type="radio"]:checked + .form-label-radio:before{
+    background-color: cornflowerblue;
+    box-shadow: inset 0 0 0 4px white;
+}
+
+.radio input[type="radio"]:hover + .form-label-radio:before{
+    border-color: yellow;
+}
+
+.radio input[type="radio"]:focus + .form-label-radio:before{
+    outline: none;
+    border-color: blueviolet;
+}
+
+.radio input[type="radio"]:disabled + .form-label-radio:before{
+    background: black;
+    box-shadow: inset 0 0 0 4px white;
+    border-color: violet;
+}
+
+#add_user .form-item .btn,
+#update_user .form-item .btn {
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    padding: .5em 1em;
+
+    background-color: yellowgreen;
+
+    cursor: pointer;
+}
+
+#add_user .form-item .btn:hover,
+#update_user .form-item .btn:hover {
+    background-color: tomato;
+    color:yellow;
 }
