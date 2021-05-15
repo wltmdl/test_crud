@@ -12,35 +12,36 @@
             <h2>Update User</h2>
             <span class="test-light">User the below form to update the account</span>
         </div>
-        <form method="POST" id="update_user">
+        <form action="" method="POST" id="update_user">
             <div class="new_user">
                 <div class="form-item">
                     <label for="name" class="form-label text-light">Name</label>
-                    <input type="text" placeholder="NAME" name='name'>
+                    <input type="text" placeholder="NAME" name='name' value="<%= user.name %>">
+                    <input type="hidden" name='id' value="<%= user._id %>">
                 </div>
                 <div class="form-item">
                     <label for="email" class="form-label text-light">Email</label>
-                    <input type="text" placeholder="example@gmail.com" name='email'>
+                    <input type="text" placeholder="example@gmail.com" name='email' value="<%= user.email %>">
                 </div>
                 <div class="form-item">
                     <label for="gender" class="form-label text-light">Gender</label>
                     <div class="inline-item radio">
-                        <input type="radio" name="gender" id="male">
+                        <input type="radio" name="gender" id="male" value="Male"<%= user.gender == 'Male'?'checked':'' %> >
                         <label for="male" class="form-label-radio">Male</label>
                     </div>
                     <div class="inline-item radio">
-                        <input type="radio" name="gender" id="female">
+                        <input type="radio" name="gender" id="female" value="Female"<%= user.gender == 'Female'?'checked':'' %>>
                         <label for="female" class="form-label-radio">Female</label>
                     </div>
                 </div>
                 <div class="form-item">
                     <label for="status" class="form-label text-light">Status</label>
                     <div class="inline-item radio">
-                        <input type="radio" name="status" id="active">
+                        <input type="radio" name="status" id="active" value="Active"<%= user.status == 'Active'?'checked':'' %>>
                         <label for="active" class="form-label-radio ">Active</label>
                     </div>
                     <div class="inline-item radio">
-                        <input type="radio" name="status" id="inactive">
+                        <input type="radio" name="status" id="inactive" value="Inactive"<%= user.status == 'Inactive'?'checked':'' %>>
                         <label for="inactive" class="form-label-radio ">Inactive</label>
                     </div>
                 </div>

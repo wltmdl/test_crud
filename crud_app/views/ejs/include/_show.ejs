@@ -6,10 +6,10 @@
     <td><%= Users[i].gender %></td>
     <td><%= Users[i].status %></td>
     <td>
-        <a href="/update-user" class="btn">
+        <a href="/update-user?id=<%= Users[i]._id %>" class="btn">
             <span>Update</span>
         </a>
-        <a class="btn">
+        <a class="btn delete" data-id=<%= Users[i]._id%> >
             <span>Delete</span>
         </a>
     </td>
